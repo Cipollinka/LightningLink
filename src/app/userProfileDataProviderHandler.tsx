@@ -1,9 +1,10 @@
 import React, {ReactNode} from 'react';
 import {UserProfileStateContext, useUserProfileDataStorage} from '../user';
+import {Image} from 'react-native';
 
-export const UserProfileDataProviderHandler: React.FC<{children: ReactNode}> = ({
-  children,
-}) => {
+export const UserProfileDataProviderHandler: React.FC<{
+  children: ReactNode;
+}> = ({children}) => {
   const {isDataLoading, setUserProfile, userProfile, resetUserProfile} =
     useUserProfileDataStorage();
 
@@ -15,6 +16,10 @@ export const UserProfileDataProviderHandler: React.FC<{children: ReactNode}> = (
         setUserProfile,
         resetUserProfile,
       }}>
+      <Image
+        style={{width: '100%', height: '100%', position: 'absolute'}}
+        source={require('../shared/bg.png')}
+      />
       {children}
     </UserProfileStateContext.Provider>
   );

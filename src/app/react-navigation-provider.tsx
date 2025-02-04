@@ -4,12 +4,9 @@ import {
   useReactNavigation,
 } from '../shared/use-react-navigation.ts';
 import {useUserStateProfile} from '../user';
+import {Image} from 'react-native';
 
-export const ReactNavigationProvider = ({
-  children,
-}: {
-  children: ReactNode;
-}) => {
+export const ReactNavigationProvider = ({children}: {children: ReactNode}) => {
   const {navigateToScreen} = useReactNavigation();
 
   const {isDataLoading} = useUserStateProfile();
@@ -20,5 +17,13 @@ export const ReactNavigationProvider = ({
     navigateToScreen(ScreenNames.Profile);
   }, [isDataLoading]);
 
-  return <>{children}</>;
+  return (
+    <>
+      <Image
+        style={{width: '100%', height: '100%', position: 'absolute'}}
+        source={require('../shared/bg.png')}
+      />
+      {children}
+    </>
+  );
 };

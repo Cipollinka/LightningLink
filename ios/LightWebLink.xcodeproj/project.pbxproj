@@ -142,6 +142,7 @@
 		614B5EF91DD34E06A708E07B /* addprofilebutton.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = addprofilebutton.png; path = ../src/shared/assets/addprofilebutton.png; sourceTree = "<group>"; };
 		67BAC6432BC44AB8ADF20535 /* loader.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = loader.png; path = ../src/shared/assets/loader.png; sourceTree = "<group>"; };
 		68CC7E1820EE4E349AC14847 /* zoombutton.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = zoombutton.png; path = ../src/shared/assets/zoombutton.png; sourceTree = "<group>"; };
+		6A1749072D52415E00E294AC /* LightWebLink.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = LightWebLink.entitlements; path = LightWebLink/LightWebLink.entitlements; sourceTree = "<group>"; };
 		6A300B848DED457B9982778C /* codeinput.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = codeinput.png; path = ../src/shared/assets/codeinput.png; sourceTree = "<group>"; };
 		6A99787C07BC4B0C8EB64DA6 /* coffecategory.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = coffecategory.png; path = ../src/shared/assets/coffecategory.png; sourceTree = "<group>"; };
 		6F853DEE3C5A49E384143E4A /* arrowrightgrey.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = arrowrightgrey.png; path = ../src/shared/assets/arrowrightgrey.png; sourceTree = "<group>"; };
@@ -227,6 +228,7 @@
 		13B07FAE1A68108700A75B9A /* LightWebLink */ = {
 			isa = PBXGroup;
 			children = (
+				6A1749072D52415E00E294AC /* LightWebLink.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -755,6 +757,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = LightWebLink/LightWebLink.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = LightWebLink/Info.plist;
@@ -762,7 +765,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -782,13 +785,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = LightWebLink/LightWebLink.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = LightWebLink/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

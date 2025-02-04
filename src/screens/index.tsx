@@ -29,11 +29,11 @@ import {ServiceScreen} from './service.tsx';
 import {EditServiceScreen} from './edit-service.tsx';
 import {LikedServices} from './liked-services.tsx';
 import {LikedNotes} from './liked-notes.tsx';
-import { FilterNotes } from "./filter-notes.tsx";
-import { EntertainmentScreen } from "./entertainment";
-import { LifeScreen } from "./life";
-import { WorkScreen } from "./work";
-import { StudyScreen } from "./study";
+import {FilterNotes} from './filter-notes.tsx';
+import {EntertainmentScreen} from './entertainment';
+import {LifeScreen} from './life';
+import {WorkScreen} from './work';
+import {StudyScreen} from './study';
 
 export type RootStackParamList = {
   [ScreenNames.Loader]: undefined; // No params
@@ -69,6 +69,19 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 export const Screens = () => {
   return (
     <View style={styles.wrapper}>
+      <Image
+        style={{width: '100%', height: '105%', position: 'absolute', flex: 1}}
+        source={require('../shared/bg.png')}
+      />
+      <View
+        style={{
+          width: '110%',
+          height: '110%',
+          position: 'absolute',
+          backgroundColor: 'white',
+          opacity: 0.5,
+        }}
+      />
       <SafeAreaView
         style={{
           marginRight: 'auto',
@@ -93,8 +106,14 @@ export const Screens = () => {
           />
           <Stack.Screen name={ScreenNames.Notes} component={NotesScreen} />
           <Stack.Screen name={ScreenNames.LikedNotes} component={LikedNotes} />
-          <Stack.Screen name={ScreenNames.Entertainment} component={EntertainmentScreen} />
-          <Stack.Screen name={ScreenNames.FilterNotes} component={FilterNotes} />
+          <Stack.Screen
+            name={ScreenNames.Entertainment}
+            component={EntertainmentScreen}
+          />
+          <Stack.Screen
+            name={ScreenNames.FilterNotes}
+            component={FilterNotes}
+          />
           <Stack.Screen
             name={ScreenNames.LikedServices}
             component={LikedServices}
@@ -156,8 +175,9 @@ export const Navigation = () => {
   if (
     !currentlyOpenedScreen ||
     !navigationActiveScreens.includes(currentlyOpenedScreen)
-  )
+  ) {
     return null;
+  }
   return (
     <View
       style={{

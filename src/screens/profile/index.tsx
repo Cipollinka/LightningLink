@@ -1,5 +1,12 @@
 import React from 'react';
-import {FlatList, Image, Linking, Text, TouchableOpacity, View} from 'react-native';
+import {
+  FlatList,
+  Image,
+  Linking,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import {PreviewProfile} from './preview-profile.tsx';
 import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {RootStackParamList} from '../index.tsx';
@@ -30,32 +37,6 @@ export const ProfileScreen = () => {
           }}>
           Settings
         </Text>
-        {/*<TouchableOpacity*/}
-        {/*  onPress={() => {*/}
-        {/*    navigate(ScreensRoads.Password);*/}
-        {/*  }}*/}
-        {/*  style={{*/}
-        {/*    borderWidth: 1,*/}
-        {/*    borderColor: '#EDECEC',*/}
-        {/*    height: 53,*/}
-        {/*    width: '100%',*/}
-        {/*    backgroundColor: 'white',*/}
-        {/*    borderRadius: 16,*/}
-        {/*    padding: 16,*/}
-        {/*    flexDirection: 'row',*/}
-        {/*    alignItems: 'center',*/}
-        {/*    justifyContent: 'space-between',*/}
-        {/*  }}>*/}
-        {/*  <Text*/}
-        {/*    style={{*/}
-        {/*      fontSize: 17,*/}
-        {/*      color: '#1A1A1A',*/}
-        {/*      fontFamily:'SF-Pro-Display-Regular',*/}
-        {/*    }}>*/}
-        {/*    Password*/}
-        {/*  </Text>*/}
-        {/*  <Image source={require('../../shared/assets/arrowrightgrey.png')} />*/}
-        {/*</TouchableOpacity>*/}
       </View>
 
       <FlatList
@@ -63,10 +44,6 @@ export const ProfileScreen = () => {
           alignItems: 'center',
         }}
         data={[
-          // {
-          //   onClick: () => {},
-          //   image: require('../../shared/assets/qraction.png'),
-          // },
           {
             onClick: () => {
               Linking.openURL(
@@ -91,7 +68,7 @@ export const ProfileScreen = () => {
           }
         ]}
         numColumns={2}
-        renderItem={({item, index}) => (
+        renderItem={({item,}) => (
           <TouchableOpacity
             onPress={item.onClick}
             style={{
